@@ -39,7 +39,7 @@ int main()
 	
 	if (carLu == '2')	
 	{
-		printf("Mode 2 joueurs : tapez le mot caché\n");
+		printf("\nMode 2 joueurs : tapez le mot caché\n");
 		lireLigne(motCache);
 	}
 		
@@ -55,19 +55,20 @@ int main()
 	motActuel[taille]='\0';
 	
 	char dif[TAILLE_MAX];
-	printf("Difficulté (tapez le nombre de coups pour trouver le mot)\n");
+	printf("\nDifficulté (tapez le nombre de coups pour trouver le mot)\n");
 	lireLigne(dif);
 	
 	coupsRestants= strtol(dif, NULL, 10);
 	coups = coupsRestants;
 
-	printf("\n\n\nNombre de coups : %d \n\n\n", coupsRestants);
+	printf("\n\n\nNombre de coups : %d \n\n", coupsRestants);
 	
 	while (coupsRestants > 0)
 	{
 	
+		printf("\nQuel est le mot secret ? %s\n", motActuel);
 		printf("Il vous reste %d coups a jouer\n", coupsRestants);
-		printf("Quel est le mot secret ? %s\n", motActuel);
+
 		printf("\nProposez une lettre : (ou appuyez sur 1 pour quitter)\n");
 		
 		carLu=lireCaractere();
